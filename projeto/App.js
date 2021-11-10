@@ -1,21 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { Text, View, StyleSheet } from "react-native";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import MinMax from "./components/minmax";
+import PrimeiroComponente from "./components/primeiro";
+import CompPadrao, { Comp1, Comp2 } from "./components/multi";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// import estilo from "./components/estilo"; 
+
+export default () => (
+  <View style={style.App}>
+    <MinMax/>
+    <Text style={estilo.Tamanho_Fonte}>{1 + 1}</Text>
+    <CompPadrao/>
+    <Comp1/>
+    <Comp2/>
+    <PrimeiroComponente/>
+  </View>
+)
+
+const style = StyleSheet.create({
+  App: {
+    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  }
+})
